@@ -39,6 +39,13 @@ class Equipo(models.Model):
         help_text='1GB, 1024MB, 512MB, 1TB, etc',
     )
     
+    mac = models.CharField(
+        verbose_name='Mac',
+        max_length=255,
+        unique=True,
+        default='mac'
+    )
+    
     t_video = models.BooleanField(
         verbose_name='Tarjeta de Video',
         default=False
