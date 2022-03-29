@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <title>{% block title %}Document{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <h1>Soporte Tecnico</h1>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="{% url 'inicio' %}" class="boton-menu-principal">Inicio</a></li>
+            <li><a href="" class="boton-menu-principal">Registros</a></li>
+            <li><a href="{% url 'Equipos:inicio' %}" class="boton-menu-principal">Equipos</a></li>
+            <li><a href="" class="boton-menu-principal">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-content">
+        {% block main-content %}{% endblock main-content %}
+    </section>
+
+    <footer>
+        <p>Departamento de Tecnologia e Informatica 2022</p>
+    </footer>
+</body>
+</html>
