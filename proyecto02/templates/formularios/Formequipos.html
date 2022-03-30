@@ -1,0 +1,52 @@
+<form action="" method="post">
+    
+    <div class="content-form">
+
+        <div class="datos marca">
+            <label for="marcar">Marca</label>
+            <input type="text" name="marca" id="marca">
+        </div>
+
+        <div class="datos modelo">
+            <label for="modelo">Modelo</label>
+            <input type="text" name="modelo" id="modelo">
+        </div>
+
+        <div class="datos n_bien">
+            <label for="bien">Numero de Bien</label>
+            <input type="text" name="bien" id="bien">
+        </div>
+        
+        <div class="datos procesador">
+            <label for="procesador">Procesador</label>
+            <select name="procesador" id="procesador">
+                {% for  in  %}
+                    <option value="{{opcion}}">{{}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <div class="datos RAM">
+            <label for="ram">Memoria RAM</label>
+            <input type="text" name="ram" id="ram">
+        </div>
+        
+        <div class="datos tarjetas">
+            <label for="tarjetas">Tarjetas</label>
+            <optgroup>
+                {% for  in  %}
+                    <label for="">
+                        {{}}
+                        <input type="checkbox" name="" id="">
+                    </label>
+                {% endfor %}
+            </optgroup>
+        </div>
+        
+        <div class="datos mac"></div>
+        
+        <div class="datos detalles"></div>
+
+    </div>
+
+</form>

@@ -11,3 +11,9 @@ def equipos(request):
     contexto = {'equipos': equipos}    
     
     return render(request, 'equipos.html', contexto)
+
+
+def registrarEquipo(request):
+    
+    
+    return render(request, )
