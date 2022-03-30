@@ -1,0 +1,45 @@
+.main-content{
+    padding: 2%;
+}
+
+.content-agregar{
+    grid-area: 1/1/2/3;
+    display: flex;
+}
+
+.agregar{
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #e7f1fa;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    grid-area: 2/1/3/12;
+    background-color: #e7f1fa;
+    box-shadow: 0 0 3px #000000;
+}
+
+th{
+    padding: 10px;
+}
+
+td{
+    display: flexbox;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #4e4e4e;
+    border-bottom: 1px solid #4e4e4e;
+}
+
+tr:hover{
+    background-color: #d4d4d4;
+}
+
+.imagen{
+    width: 15px;
+    height: 15px;
+}

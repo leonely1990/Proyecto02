@@ -58,5 +58,6 @@ class Equipo(models.Model):
     
     detalles = models.CharField(
         verbose_name="Detalles",
-        max_length=255
+        max_length=255,
+        null=True
     )

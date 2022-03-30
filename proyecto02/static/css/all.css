@@ -34,6 +34,7 @@ footer{
     grid-area: 4/1/5/12;
     padding: 1%;
     background-color: #6cace4;
+    text-align: center;
 }
 
 /* Cabecera */

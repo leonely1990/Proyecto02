@@ -1,14 +1,77 @@
 {% extends 'template01.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/equipos.css' %}">{% endblock css %}
 
 {% block title %}Equipos{% endblock title %}
 
 {% block main-content %}
 
-    <aside>
-        <ul class="menu-secundario">
-            <li><a href="#">Crear Equipo</a></li>
-            <li><a href="#">Ver Equipos</a></li>
-        </ul>
-    </aside>
+    <div class="content-agregar">
+        <a href="" class="agregar">Crear Equipo</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Numero de Bien</th>
+                <th>Procesador</th>
+                <th>RAM</th>
+                <th>Tarjeta de Video</th>
+                <th>Tarjeta de Red</th>
+                <th>Mac</th>
+                <th>Detalles</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for dato in equipos %}
+                <tr>
+                    <td>{{ dato.id }}</td>
+                    <td>{{ dato.marca }}</td>
+                    <td>{{ dato.modelo }}</td>
+                    <td>{{ dato.n_bien_nacional }}</td>
+                    <td>{{ dato.procesador }}</td>
+                    <td>{{ dato.ram }}</td>
+                    <td>
+                        {% if dato.t_video %}
+                            <img src="{% static 'img/check.svg' %}" alt="tiene" class="imagen">
+                        {% else %}
+                            <img src="{% static 'img/x.svg' %}" alt="no tiene" class="imagen">
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if dato.t_red %}
+                            <img src="{% static 'img/check.svg' %}" alt="tiene" class="imagen">
+                        {% else %}
+                            <img src="{% static 'img/x.svg' %}" alt="no tiene" class="imagen">
+                        {% endif %}
+                    </td>
+                    <td>{{ dato.mac }}</td>
+                    <td>
+                        {% if dato.detalles %}
+                            <img src="{% static 'img/ver.svg' %}" alt="" width="25px" height="25px">
+                        {% else %}
+                            <img src="{% static 'img/nover.svg' %}" alt="" width="25px" height="25px">
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="{% static 'img/editar.svg' %}" alt="editar" width="25px" height="25px">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="{% static 'img/borrar.svg' %}" alt="editar" width="25px" height="25px">
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock main-content %}

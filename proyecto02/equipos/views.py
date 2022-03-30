@@ -1,6 +1,13 @@
+import imp
 from django.shortcuts import render
+from .models import Equipo
 
 # Create your views here.
 
 def equipos(request):
-    return render(request, 'equipos.html')
+    
+    equipos = Equipo.objects.order_by('id')
+    
+    contexto = {'equipos': equipos}    
+    
+    return render(request, 'equipos.html', contexto)
