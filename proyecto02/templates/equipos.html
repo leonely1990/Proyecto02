@@ -7,10 +7,10 @@
 {% block main-content %}
 
     <div class="content-agregar">
-        <a href="" class="agregar" id="botonCrear">Crear Equipo</a>
+        <p class="agregar" id="botonCrear">Crear Equipo</p>
     </div>
 
-    <div class="formulario">
+    <div class="formulario" id="formulario">
         <h1>Agregar Equipo Nuevo</h1>
         <hr>
         {% include 'formularios/Formequipos.html' %}
@@ -81,4 +81,5 @@
         </tbody>
     </table>
 
+    <script src="{% static 'js/all.js' %}"></script>
 {% endblock main-content %}
