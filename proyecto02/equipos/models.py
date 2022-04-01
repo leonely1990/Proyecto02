@@ -33,10 +33,18 @@ class Equipo(models.Model):
         default='i3',
     )
     
+    hdd = models.CharField(
+        verbose_name='Disco Duro',
+        max_length=255,
+        help_text='1GB, 1024MB, 512MB, 1TB, etc',
+        null=True,
+    )
+    
     ram = models.CharField(
         verbose_name='RAM',
         max_length=255,
         help_text='1GB, 1024MB, 512MB, 1TB, etc',
+        null=True,
     )
     
     mac = models.CharField(

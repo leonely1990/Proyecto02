@@ -1,6 +1,7 @@
 <form action="" method="post">
+    {% csrf_token %}
     
-    <div class="content-form">
+    <div class="content-form" id="formulario">
 
         <div class="datos marca">
             <label for="marcar">Marca</label>
@@ -20,8 +21,8 @@
         <div class="datos procesador">
             <label for="procesador">Procesador</label>
             <select name="procesador" id="procesador">
-                {% for  in  %}
-                    <option value="{{opcion}}">{{}}</option>
+                {% for opcion in procesadores %}
+                    <option value="{{opcion}}">{{opcion}}</option>
                 {% endfor %}
             </select>
         </div>
@@ -34,12 +35,12 @@
         <div class="datos tarjetas">
             <label for="tarjetas">Tarjetas</label>
             <optgroup>
-                {% for  in  %}
+                {% comment %} {% for  in  %}
                     <label for="">
                         {{}}
                         <input type="checkbox" name="" id="">
                     </label>
-                {% endfor %}
+                {% endfor %} {% endcomment %}
             </optgroup>
         </div>
         
