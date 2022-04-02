@@ -6,8 +6,6 @@
 
 .content-form{
     background-color: #ececec;
-    grid-area: 1/1/2/12;
-    z-index: 2;
     justify-self: center;
     margin: 1%;
     border-radius: 10px;
@@ -53,11 +51,15 @@ form p:nth-child(10){
     justify-content: space-around;
 }
 
-.botonesFormulario p{
+.botonesFormulario p, [type="submit"]{
     display: flex;
     padding: 10px;
     margin: 3px;
     background-color: #93dddd;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
+    box-shadow: 0 0 0;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
 }

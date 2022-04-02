@@ -1,14 +1,26 @@
-let CrearEquipo = document.getElementById('botonCrear');
-let BotonCerrar = document.getElementById('botonCerrar');
+let botonCrearEquipo = document.getElementById('crearEquipo');
+let botonCrear = document.getElementById('crear');
+let botonSalir = document.getElementById('salir');
+let formulario = document.getElementById('contenedorFormulario');
+let tabla = document.getElementById('tabla');
 
-function mostrar() {
-    document.getElementById('formulario').style.display = 'flex';
-    document.getElementsByName('body').style.BackgroudColor = "#d3e9fc00";
+function mostrarForm() {
+    formulario.style.display = 'flex';
+    tabla.style.display = 'none';
+    botonCrearEquipo.style.display = 'none';
+    botonCrear.onsubmit();
 }
 
-function cerrar(){
-    document.getElementById('formulario').style.display = 'none';
+function salirForm() {
+    formulario.style.display = 'none';
+    tabla.style.display = 'table';
+    botonCrearEquipo.style.display = 'block';
 }
 
-CrearEquipo.addEventListener('click', mostrar);
-BotonCerrar.addEventListener('click', cerrar);
+function crearEquipo(params) {
+    document.forms.submit
+}
+
+botonCrearEquipo.addEventListener('click', mostrarForm);
+botonSalir.addEventListener('click', salirForm);
+botonCrear.addEventListener('submit', crearEquipo);

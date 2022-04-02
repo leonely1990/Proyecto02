@@ -65,5 +65,6 @@ class Equipo(models.Model):
     detalles = models.TextField(
         verbose_name="Detalles",
         max_length=255,
-        null=True
+        null=True,
+        blank=True
     )

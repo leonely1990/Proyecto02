@@ -7,35 +7,19 @@ from .form import *
 
 def equipos(request):
     
-    if request.method == 'GET':
-        for nose in request.GET:
-            print(nose)
-    
-    equipos = Equipo.objects.order_by('id')
-    
-    contexto = {'equipos': equipos}    
-    
-    return render(request, 'equipos.html', contexto)
-
-
-def registrarEquipo(request):    
-    
-    if request.method == 'POST':
-        pass
-        
-    
-    return redirect(to='Equipos:inicio')
-
-def formula(request):
-    
     if request.method == 'POST':
         formulario = EquipoForm(request.POST)
         if formulario.is_valid():
             formulario.save()
             return redirect('Equipos:inicio')
     
+    
+    equipos = Equipo.objects.order_by('id')
     formulario = EquipoForm().as_p()
     
-    contexto = {'formulario':formulario}
+    contexto = {
+        'equipos': equipos,
+        'formulario': formulario,
+    }    
     
-    return render(request, 'formIndex.html', contexto)
+    return render(request, 'equipos.html', contexto)
