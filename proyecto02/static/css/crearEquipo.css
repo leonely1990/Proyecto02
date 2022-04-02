@@ -1,0 +1,63 @@
+.titulo-form{
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-form{
+    background-color: #ececec;
+    grid-area: 1/1/2/12;
+    z-index: 2;
+    justify-self: center;
+    margin: 1%;
+    border-radius: 10px;
+    box-shadow: 0 0 3px black;
+    padding: 1%;
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+form p{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 15px;
+}
+
+input[type="text"]{
+    background-color: inherit;
+    border: 0;
+    border-bottom: 1px solid black;
+    padding: 3px;
+}
+
+#id_procesador{
+    background-color: inherit;
+    border: 0;
+    border-bottom: 1px solid black;
+    padding: 3px;
+}
+
+form p:nth-child(9){
+    display: block;
+}
+
+form p:nth-child(10){
+    display: block;
+}
+
+.botonesFormulario{
+    display: flex;
+    justify-content: space-around;
+}
+
+.botonesFormulario p{
+    display: flex;
+    padding: 10px;
+    margin: 3px;
+    background-color: #93dddd;
+    border-radius: 5px;
+    cursor: pointer;
+}

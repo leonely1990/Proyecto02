@@ -4,18 +4,7 @@
 
 {% block title %}Equipos{% endblock title %}
 
-{% block main-content %}
-
-    <div class="content-agregar">
-        <p class="agregar" id="botonCrear">Crear Equipo</p>
-    </div>
-
-    <div class="formulario" id="formulario">
-        <h1>Agregar Equipo Nuevo</h1>
-        <hr>
-        {% include 'formularios/Formequipos.html' %}
-    </div>
-    
+{% block main-content %}    
 
     <table>
         <thead>
@@ -81,5 +70,4 @@
         </tbody>
     </table>
 
-    <script src="{% static 'js/all.js' %}"></script>
 {% endblock main-content %}

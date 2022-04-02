@@ -1,58 +1,21 @@
-<form action="" method="post">
-    {% csrf_token %}
-    
-    <div class="content-form" id="formulario">
+<div class="content-form">
 
-        <div class="datos marca">
-            <label for="marcar">Marca</label>
-            <input type="text" name="marca" id="marca">
-        </div>
-
-        <div class="datos modelo">
-            <label for="modelo">Modelo</label>
-            <input type="text" name="modelo" id="modelo">
-        </div>
-
-        <div class="datos n_bien">
-            <label for="bien">Numero de Bien</label>
-            <input type="text" name="bien" id="bien">
-        </div>
-        
-        <div class="datos procesador">
-            <label for="procesador">Procesador</label>
-            <select name="procesador" id="procesador">
-                {% for opcion in procesadores %}
-                    <option value="{{opcion}}">{{opcion}}</option>
-                {% endfor %}
-            </select>
-        </div>
-        
-        <div class="datos RAM">
-            <label for="ram">Memoria RAM</label>
-            <input type="text" name="ram" id="ram">
-        </div>
-        
-        <div class="datos tarjetas">
-            <label for="tarjetas">Tarjetas</label>
-            <optgroup>
-                {% comment %} {% for  in  %}
-                    <label for="">
-                        {{}}
-                        <input type="checkbox" name="" id="">
-                    </label>
-                {% endfor %} {% endcomment %}
-            </optgroup>
-        </div>
-        
-        <div class="datos mac"></div>
-        
-        <div class="datos detalles"></div>
-
-        <div class="botonesFormulario">
-            <input type="submit" value="Crear">
-            <button id="botonCerrar">Cerrar</button>
-        </div>
-
+    <div class="titulo-form">
+        <h1>Crear Nuevo Equipo</h1>
+        <hr>
     </div>
 
-</form>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{formulario}}
+    
+        <div class="botonesFormulario">
+            <p id="crear">Crear</p>
+            <p id="salir">Salir</p>
+        </div>
+    
+    </form>
+
+</div>
+
